@@ -1,0 +1,38 @@
+#Kconfig test
+# key word "menu" and "endmenu", give a empty line
+
+menu "my_menu1"
+config TEST_MENU1_CONFIG_BOOL
+	bool "this is the test menu1 bool test"
+	default y
+	help
+		this is the my_menu1 config boot test
+	
+config TEST_MENU1_CONFIG_INT
+	int "test menu1 config int"
+	default 13
+	help
+		this is the my_menu1 config int test
+
+config TEST_MENU1_CONFIG_STRING
+	string "test menu1 config string"
+	default "my hello"
+	help
+		this is the my_menu1 config string test
+
+menuconfig TEST_MENU1_MENUCONFIG
+	bool "this is the menuconfig"
+	default n
+	help
+		this is the my_menu1 menuconfig test 
+
+config DEPEND_ON_TEST
+	bool "this is the depend on test"
+	depends on TEST_MENU1_MENUCONFIG
+	default n
+	help
+		depends on test
+		
+endmenu
+
+#source sub/KConfig
