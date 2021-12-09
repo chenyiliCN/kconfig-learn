@@ -10,7 +10,7 @@ step: for ubuntu
 3. use the tool to see the result: kconfig-mconf kconfig
 4. find file ".config" after step 3.
 
-use make menuconfig to config is very common
+use make menuconfig to config is very common. 
 see also Makefile
 
 
